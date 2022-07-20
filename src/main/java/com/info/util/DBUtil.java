@@ -9,7 +9,8 @@ public class DBUtil {
 	
 	public static Connection getMySQLDBConnection() {
 		String driverName = "com.mysql.cj.jdbc.Driver";
-		String url = "jdbc:mysql://localhost:3306/kafkadb";
+		String url = "jdbc:mysql://localhost:3306/bootdb";
+		
 		String username = "root";
 		String password = "root";
 		
@@ -18,6 +19,7 @@ public class DBUtil {
 			connection = DriverManager.getConnection(url, username, password);
 			
 		}catch (Exception e) {
+			System.out.print("*******************");
 			e.printStackTrace();
 		}
 		

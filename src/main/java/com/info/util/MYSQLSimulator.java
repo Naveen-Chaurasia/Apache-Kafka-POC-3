@@ -22,7 +22,7 @@ public class MYSQLSimulator {
 			PreparedStatement pStatement = connection.prepareStatement(query);
 			
 			ResultSet resultSet = pStatement.executeQuery();
-			
+			System.out.print(resultSet);
 			
 			while(resultSet.next()) {
 				TaxiZone taxiZone = new TaxiZone();
