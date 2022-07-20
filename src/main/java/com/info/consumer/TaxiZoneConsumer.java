@@ -40,6 +40,7 @@ public class TaxiZoneConsumer {
 			ConsumerRecords<Integer, TaxiZone> records = consumer.poll(Duration.ofMillis(100));
 
 			for (ConsumerRecord<Integer, TaxiZone> record : records) {
+				System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
 				System.out.println(record);
 			}
 		}
