@@ -16,5 +16,9 @@ public class ZoneSerializer implements Closeable, AutoCloseable, Serializer<Taxi
 		String line = gson.toJson(taxiZone);	// converting java object to json
 		return line.getBytes();
 	}
-
+//for building uri
+//UriComponents uriComponents = UriComponentsBuilder.newInstance()
+//.scheme("http").host("www.baeldung.com").path("/junit-5").build();
+	
+	
 }
