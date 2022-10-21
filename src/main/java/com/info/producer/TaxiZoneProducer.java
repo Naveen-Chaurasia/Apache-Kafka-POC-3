@@ -31,7 +31,7 @@ public class TaxiZoneProducer {
 
 	public void produceMessage(Integer key, TaxiZone taxiZone)throws InterruptedException {
 		
-		ProducerRecord<Integer, TaxiZone> record = new ProducerRecord<Integer, TaxiZone>("taxizone-topic", key, taxiZone);
+		ProducerRecord<Integer, TaxiZone> record = new ProducerRecord<Integer, TaxiZone>("taxizone", key, taxiZone);
 		producer.send(record);
 		
 		System.out.println(taxiZone);

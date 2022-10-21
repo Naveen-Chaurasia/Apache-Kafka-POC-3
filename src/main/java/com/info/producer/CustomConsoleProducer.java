@@ -31,6 +31,23 @@ public class CustomConsoleProducer {
 			Thread.sleep(1000);
 		}
 		
+		
+	//	ListenableFuture<SendResult<String, String>> future = kafkaTemplate.send(topicName, message);
+		//This will check producer result asynchronously to avoid thread blocking
+//	    future.addCallback(new ListenableFutureCallback<SendResult<String, String>>() {
+//	      @Override
+//	      public void onFailure(@NotNull Throwable throwable) {
+//	        logger.error("Failed to send message", throwable);
+//	      }
+//
+//	      @Override
+//	      public void onSuccess(SendResult<String, String> stringStringSendResult) {
+//	        logger.info("Sent message successfully");
+//	      }
+//	    });
+		
+		
+		
 		producer.close();
 		
 	}

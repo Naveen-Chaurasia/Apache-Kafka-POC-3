@@ -56,3 +56,10 @@ how are you
 PS D:\Devopse> docker exec -it 813e23dded95 kafka-console-consumer --bootstrap-server localhost:9092 --topic taxizone-topic --from-beginning
 hi Naveen
 how are you
+
+
+
+
+
+
+https://ajaychoudhary091989.medium.com/spring-boot-event-driven-micro-service-with-kafka-and-mongodb-956534e4318e

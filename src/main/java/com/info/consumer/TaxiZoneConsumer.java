@@ -31,14 +31,15 @@ public class TaxiZoneConsumer {
 		properties.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, ZoneDeserializer.class);
 		
 		consumer = new KafkaConsumer<Integer, TaxiZone>(properties);
-		consumer.subscribe(Collections.singletonList("taxizone-topic"));
+		consumer.subscribe(Collections.singletonList("taxizone"));
 	}
 	
 	public void consumeMessage() {
 		
 		while(true) {
+			System.out.println("***********************$");
 			ConsumerRecords<Integer, TaxiZone> records = consumer.poll(Duration.ofMillis(100));
-
+			System.out.println("&&&&&&&&&&&");
 			for (ConsumerRecord<Integer, TaxiZone> record : records) {
 				System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
 				System.out.println(record);
